@@ -7,7 +7,7 @@ interface Props {
 export function RoomCodeBadge({ roomId }: Props) {
   const [copied, setCopied] = useState(false);
 
-  const url = `${window.location.origin}/pokerplanning/#${roomId}`;
+  const url = `${window.location.origin}${window.location.pathname}#${roomId}`;
 
   const copy = async () => {
     await navigator.clipboard.writeText(url);
